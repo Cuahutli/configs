@@ -9,10 +9,12 @@ Una vez instalado, realizar los siguientes pasos.
 	```
 	 	sudo apt-get install git
 	```
+    
 *	Crear enlace simbólico de python2.7 ya que por default sólo viene el de python3
 
 	```
 		cd /usr/bin
+        
         sudo ln -s python2.7 python
 	```
 
@@ -25,7 +27,7 @@ Una vez instalado, realizar los siguientes pasos.
 *	Instalar virtualenv y virtualenvwrapper(Configurarlo)
 
 	```
-		sudo pip install virtualenv
+        sudo pip install virtualenv
         sudo pip install virtualenvwrapper
         export WORKON_HOME=$HOME/.venvs 
         source /usr/local/bin/virtualenvwrapper.sh
