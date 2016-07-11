@@ -12,7 +12,7 @@ Una vez instalado, realizar los siguientes pasos.
     
 *	Crear enlace simbólico de python2.7 ya que por default sólo viene el de python3
 
-	```
+	```sh
 		cd /usr/bin \n
         sudo ln -s python2.7 python
 	```
