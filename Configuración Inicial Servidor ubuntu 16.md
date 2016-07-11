@@ -43,3 +43,4 @@ Una vez instalado, realizar los siguientes pasos.
 	```bash
 		sudo apt-get install htop
 	```
+
