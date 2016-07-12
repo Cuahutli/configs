@@ -1,0 +1,64 @@
+#!/bin/sh
+
+# __author__: Cuahutli Miguel Ulloa Robles
+
+############################################################################
+#   Script para iniciar máquinas virtuales creadas en VirtualBox en modo   #
+#   headless, lo cual permite que se ejecuten en segundo plano; Este       #
+#   script se debe copiar en /etc/init.d en los sistemas linux basados en  #
+#   debian y darle permisos de ejecución cd /etc/init.d/ && sudo chmod u+x #
+#   de esta forma las máquinas se iniciarán junto con el sistema operativo #
+#   consideranco el delay (tiempo de espera) para iniciarse de una a otra  #
+############################################################################
+
+
+VMUSER=sistemas
+VMPROXY="Proxy"
+VMSOL="sol"
+VMOPENFIRE="debian w-openfire"
+VMNCOMPUTING="ServidorNcomputing"
+WINPC="Windows"
+ESPERA=20
+
+case "$1" in
+        start)
+                echo "iniciando Servidor Proxy..."
+                sudo -H -b -u $VMUSER vboxmanage startvm "$VMPROXY" --type headless
+		sleep $ESPERA
+                echo "iniciando Servidor de Base de Datos..."
+                sudo -H -b -u $VMUSER vboxmanage startvm "$VMSOL" --type headless
+		sleep $ESPERA
+                echo "iniciando Servidor Openfire"
+                sudo -H -b -u $VMUSER vboxmanage startvm "$VMOPENFIRE" --type headless
+		sleep $ESPERA
+                echo "iniciando Servidor Ncomputing..."
+                sudo -H -b -u $VMUSER vboxmanage startvm "$VMNCOMPUTING" --type headless
+		sleep $ESPERA
+                echo "iniciando Servidor WINDOWS..."
+                sudo -H -b -u $VMUSER vboxmanage startvm "$WINPC" --type headless
+                ;;
+        stop)
+                echo "Apagando Servidor Proxy..."
+                sudo -H -b -u $VMUSER vboxmanage controlvm "$VMPROXY" poweroff
+		sleep $ESPERA
+                echo "Apagando Servidor Base de Datos"
+                sudo -H -b -u $VMUSER vboxmanage controlvm "$VMSOL" poweroff
+		sleep $ESPERA
+                echo "Apagando Servidor Openfire"
+                sudo -H -b -u $VMUSER vboxmanage controlvm "$VMOPENFIRE" poweroff
+		sleep $ESPERA
+                echo "Apagando Servidor Ncomputing"
+                sudo -H -b -u $VMUSER vboxmanage controlvm "$VMNCOMPUTING" poweroff
+		sleep $ESPERA
+                echo "Apagando Servidor WINDOWS"
+                sudo -H -b -u $VMUSER vboxmanage controlvm "$WINPC" poweroff
+                ;;
+        list)
+		  sudo -H -b -u $VMUSER vboxmanage list vms
+                ;;
+        *)
+                echo "Error"
+                exit 1
+		;;
+	esac
+exit 0
