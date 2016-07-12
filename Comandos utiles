@@ -1,0 +1,5 @@
+
+# Copiar un archivo de una máquina remota a la máquina local a través de SCP
+
+	scp username@ip_or_hostname:/path/to/file/name_file /path/to/copy/file
+
