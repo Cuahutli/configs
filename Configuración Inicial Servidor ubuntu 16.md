@@ -43,4 +43,10 @@ Una vez instalado, realizar los siguientes pasos.
 	```bash
 		sudo apt-get install htop
 	```
+    
+*	Ponerle password al root
+	
+    ```bash
+    	sudo passwd root
+    ```
 
