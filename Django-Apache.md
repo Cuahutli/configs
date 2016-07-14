@@ -1,4 +1,4 @@
-##	Configuración de Django bajo Apache utilizando con virtualenv
+##	Configuración para servir una web Django + VirtualEnv con Apache
 
 *	Validar que se tiene instalado Apache, en caso de no estar instalarlo.
 
