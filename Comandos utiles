@@ -3,3 +3,12 @@
 
 	scp username@ip_or_hostname:/path/to/file/name_file /path/to/copy/file
 
+# Agregar un usuario existente a un grupo existente
+
+	sudo usermod -a -G www-data sistemas
+	[sudo usermod -a -G groupname username]
+
+# Solucionar este error
+# E: No se pudo bloquear /var/lib/dpkg/lock - open (11: Recurso no disponible temporalmente)
+# E: No se pudo bloquear el directorio de administración (/var/lib/dpkg/),¿quizás haya algún otro proceso utilizándolo?
+	sudo fuser -vki  /var/lib/dpkg/lock
