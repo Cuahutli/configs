@@ -10,6 +10,7 @@
 	```
     
 - hacer prueba rsync:
+
 	**(hacer prueba de rsync con el .bat creado)**
 
 - configurar el servicio **sshd** de cygwin
