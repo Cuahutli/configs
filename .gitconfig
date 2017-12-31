@@ -1,0 +1,14 @@
+[user]
+	name = Cuahutli Miguel Ulloa Robles
+	email = ing.cuahutliulloa@gmail.com
+[gc]
+	autoDetach = false
+[alias]
+	a = add --all
+	cm = commit -m
+	cam = commit -am
+	s = status -s -b
+	lg = log --oneline --decorate --all --graph
+	p = git push
+	pl = git pull
+
