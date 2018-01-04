@@ -101,3 +101,13 @@ https://app.getpostman.com/app/download/linux64?_ga=2.12070644.1764987583.151509
 ```sh
 sudo npm install -g @angular/cli
 ```
+
+
+
+
+
+### Solución de "problemas"
+
+- Crear un launcher para pycharm
+
+https://askubuntu.com/questions/391439/how-can-i-set-up-pycharm-to-launch-from-the-launcher
