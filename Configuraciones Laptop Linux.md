@@ -94,3 +94,10 @@ sudo apt-get install apache2
 ```sh
 https://app.getpostman.com/app/download/linux64?_ga=2.12070644.1764987583.1515097283-875354375.1515097283
 ```
+
+
+- Instalamos angular-cli
+
+```sh
+sudo npm install -g @angular/cli
+```
