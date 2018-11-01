@@ -118,7 +118,7 @@ function set_bash_prompt () {
 
   # Set the bash prompt variable.
   #PS1="${PYTHON_VIRTUALENV}${LIGHT_GREEN}\u ${YELLOW}\W${COLOR_NONE} ${BRANCH} ${PROMPT_SYMBOL} "
-  PS1="${PYTHON_VIRTUALENV}${LIGHT_BLUE}\u ${YELLOW}~${COLOR_NONE} ${BRANCH} ${PROMPT_SYMBOL} "
+  PS1="${PYTHON_VIRTUALENV}${LIGHT_GREEN}\u@\h ${YELLOW}~${COLOR_NONE} ${BRANCH} ${PROMPT_SYMBOL} "
   #PROMPT_COMMAND='\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1'
   PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
 
