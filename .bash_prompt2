@@ -126,4 +126,3 @@ function set_bash_prompt () {
 
 # Tell bash to execute this function just before displaying its prompt.
 PROMPT_COMMAND=set_bash_prompt
-#
